@@ -1,4 +1,4 @@
-FROM n8nio/n8n
+FROM n8nio/n8n:1.37.1
 
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
@@ -12,5 +12,6 @@ ENV DB_TABLE_PREFIX=n8n_
 
 EXPOSE 5678
 
-CMD ["n8n", "start"]
+CMD ["node", "./packages/cli/bin/n8n"]
+
 
