@@ -14,7 +14,7 @@ ENV DB_TABLE_PREFIX=n8n_
 
 EXPOSE 5678
 
-CMD ["n8n", "start"]
+CMD ["n8n"]
 
 
 
