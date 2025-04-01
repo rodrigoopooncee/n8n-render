@@ -1,20 +1,17 @@
-FROM node:18-bullseye
-
-WORKDIR /app
-
-RUN apt-get update && apt-get install -y python3 make g++ curl bash
-RUN npm install -g n8n
-
-EXPOSE 5678
+FROM n8nio/n8n:1.37.1
 
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
 ENV N8N_BASIC_AUTH_PASSWORD=admin123
-ENV DB_TYPE=postgresdb
-ENV DB_POSTGRESDB_CONNECTION_URL=${DB_POSTGRESDB_CONNECTION_URL}
-ENV DB_TABLE_PREFIX=n8n_
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
 ENV N8N_PROTOCOL=http
 
-CMD ["n8n"]
+ENV DB_TYPE=postgresdb
+ENV DB_POSTGRESDB_CONNECTION_URL=${DB_POSTGRESDB_CONNECTION_URL}
+ENV DB_TABLE_PREFIX=n8n_
+
+EXPOSE 5678
+
+CMD ["node", "./packages/cli/bin/n8n"]
+
