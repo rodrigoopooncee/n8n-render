@@ -13,5 +13,4 @@ ENV DB_TABLE_PREFIX=n8n_
 
 EXPOSE 5678
 
-CMD ["node", "./packages/cli/bin/n8n"]
 
