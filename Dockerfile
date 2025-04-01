@@ -8,7 +8,7 @@ ENV N8N_PORT=5678
 ENV N8N_PROTOCOL=http
 
 ENV DB_TYPE=postgresdb
-ENV DB_POSTGRESDB_CONNECTION_URL=${DB_POSTGRESDB_CONNECTION_URL}
+ENV DB_POSTGRESDB_CONNECTION_URL=postgresql://revielo_db_user:Ol9KQVYtVkltRneuxOVoLmpWdY4Hh6At@dpg-cvlshbjuibrs73dnfd1g-a.oregon-postgres.render.com:5432/revielo_db
 ENV DB_TABLE_PREFIX=n8n_
 
 EXPOSE 5678
