@@ -9,5 +9,3 @@ ENV N8N_PORT=5678
 ENV DB_TYPE=sqlite
 
 EXPOSE 5678
-
-CMD ["n8n", "start"]
